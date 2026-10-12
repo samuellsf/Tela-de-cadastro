@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar sua conta - Dev Web</title>
+    <!-- Ícones FontAwesome para os inputs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="signup-container">
+        <!-- Logo / Foto DEV WEB substituindo o raio -->
+        <div class="logo-container">
+            <img src="img\Emblema Futurista SF em Circuitos.png" alt="DEV WEB Logo" class="dev-logo">
+        </div>
+
+        <h1>Crie sua conta</h1>
+        <p class="subtitle">Comece sua jornada conosco hoje mesmo. É rápido e fácil!</p>
+
+        <form id="signupForm">
+            <!-- Nome Completo -->
+            <div class="input-group">
+                <label for="fullname">NOME COMPLETO</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="fullname" placeholder="Ex: João da Silva" required>
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="input-group">
+                <label for="email">E-MAIL</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+            </div>
+
+            <!-- Senha -->
+            <div class="input-group">
+                <label for="password">SENHA</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-lock"></i>
+                    <input type="password" id="password" placeholder="Mínimo de 8 caracteres" required>
+                    <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+                <!-- Barra de Força da Senha -->
+                <div class="password-strength-bars">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                    <div class="bar" id="bar4"></div>
+                </div>
+                <span class="password-hint-title">Digite uma senha forte</span>
+                
+                <!-- Requisitos -->
+                <ul class="password-requirements">
+                    <li id="req-length" class="invalid"><span class="bullet"></span> Mínimo 8 caracteres</li>
+                    <li id="req-uppercase" class="invalid"><span class="bullet"></span> Letra maiúscula</li>
+                    <li id="req-number" class="invalid"><span class="bullet"></span> Um número</li>
+                    <li id="req-special" class="invalid"><span class="bullet"></span> Caractere especial</li>
+                </ul>
+            </div>
+
+          
+            <!-- Confirmar Senha -->
+            <div class="input-group">
+                <label for="confirmPassword">CONFIRMAR SENHA</label>
+                <div class="input-wrapper">
+                    <input type="password" id="confirmPassword" placeholder="Repita sua senha" required>
+                    <i class="fa-regular fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                </div>
+            </div>
+
+            <!-- Termos de Serviço -->
+            <div class="terms-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Eu concordo com os <a href="#">Termos de Serviço</a> e a <a href="#">Política de Privacidade</a></label>
+            </div>
+
+            <!-- Botão Criar Conta -->
+            <button type="submit" class="btn-submit">Criar Conta <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+        <!-- Recuperação de Senha logo abaixo do botão Criar Conta -->
+            <div class="forgot-password-container">
+                <a href="#" id="forgotPasswordLink">Esqueceu sua senha?</a>
+            </div>
+        </form>
+
+        <!-- Divisor -->
+        <div class="divider">
+            <span>OU CONTINUE COM</span>
+        </div>
+
+        <!-- Botões Sociais -->
+        <div class="social-login">
+            <button class="btn-social">
+                <i class="fa-brands fa-google">}</i> Google
+            </button>
+            <button class="btn-social">
+                <i class="fa-brands fa-github"></i> GitHub
+            </button>
+        </div>
+
+        <!-- Rodapé / Login -->
+        <div class="footer-login">
+            <p>Já tem uma conta? <a href="#">Faça login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
