@@ -8,8 +8,7 @@
 }
 
 body {
-    background-color: #093cbf;
-    color: #94a3b8;
+ background: #093cbf url("img/fundo-tech.jpg") no-repeat center center / cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,15 +16,14 @@ body {
     padding: 20px;
 }
 
-
 .signup-container {
     width: 100%;
-    max-width: 480px;
+    max-width: 380px; /* Reduzido para 380px para estreitar a caixa */
     background-color: #0d121f; 
-    padding: 32px 28px;
+    padding: 20px 18px; /* Espaçamento interno menor para encolher o cartão */
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
+    border-radius: 14px;
     border: 1px solid rgba(99, 102, 241, 0.4); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.15); 
 }
@@ -38,17 +36,17 @@ body {
 }
 
 .dev-logo {
-    width: 68px;
-    height: 68px;
-    border-radius: 16px;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
     border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 h1 {
     color: #ffffff;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 8px;
@@ -56,14 +54,14 @@ h1 {
 
 .subtitle {
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     color: #64748b;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 /* Inputs e Formulário */
 .input-group {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -95,7 +93,7 @@ h1 {
     background-color: #111827;
     border: 1px solid #1f2937;
     border-radius: 10px;
-    padding: 14px 16px 14px 42px;
+    padding: 10px 14px 10px 38px;
     color: #ffffff;
     font-size: 14px;
     outline: none;
@@ -211,9 +209,9 @@ h1 {
 .terms-group {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin: 16px 0 22px 0;
-    font-size: 13px;
+    gap: 8px;
+    margin: 12px 0 16px 0; /* Mais compacto */
+    font-size: 12px;
     color: #94a3b8;
 }
 
@@ -240,8 +238,8 @@ h1 {
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    padding: 14px;
+    border-radius: 8px;
+    padding: 11px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
@@ -266,7 +264,7 @@ h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 24px 0;
+    margin: 16px 0;
 }
 
 .divider::before, .divider::after {
@@ -286,8 +284,8 @@ h1 {
 /* Redes Sociais */
 .social-login {
     display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 10px;
+    margin-bottom: 16px;
 }
 
 .btn-social {
@@ -295,9 +293,9 @@ h1 {
     background-color: #111827;
     border: 1px solid #1f2937;
     border-radius: 10px;
-    padding: 12px;
+    padding: 10px;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     cursor: pointer;
     display: flex;
@@ -327,4 +325,10 @@ h1 {
 
 .footer-login a:hover {
     text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed;
+    }
 }
