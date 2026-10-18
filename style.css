@@ -8,14 +8,16 @@
 }
 
 body {
- background: #093cbf url("img/fundo-tech.jpg") no-repeat center center / cover;
+    background: #093cbf url("img/fundo-tech.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    min-height: 100dvh; /* Altura exata da viewport dinâmica no mobile */
+    padding: 16px;
+    overflow-x: hidden;
 }
-
 .signup-container {
     width: 100%;
     max-width: 380px; /* Reduzido para 380px para estreitar a caixa */
@@ -327,8 +329,113 @@ h1 {
     text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+/* =========================================================
+   BREAKPOINTS RESPONSIVOS PARA TODOS OS DISPOSITIVOS
+   ========================================================= */
+
+/* 1. Telas muito compactas (iPhone SE, Dobráveis fechados: até 380px) */
+@media (max-width: 380px) {
+    body {
+        padding: 12px;
+    }
+
+    .signup-container {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    /* Empilha os botões sociais em telas estreitas */
+    .social-login {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Coloca os requisitos de senha em uma coluna só */
+    .password-requirements {
+        grid-template-columns: 1fr;
+    }
+
+    .input-wrapper input {
+        font-size: 13px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+}
+
+/* 2. Celulares padrão (iPhone 16, Pixel 9/10, Galaxy A55: de 381px a 480px) */
+@media (min-width: 381px) and (max-width: 480px) {
+    .signup-container {
+        max-width: 100%;
+        padding: 22px 18px;
+    }
+}
+
+/* 3. Tablets e Dobráveis abertos (iPad Mini, Galaxy Z Fold aberto: de 481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 30px;
+    }
+
+    .signup-container {
+        max-width: 420px; /* Levemente mais largo para visual harmonioso */
+        padding: 28px 24px;
+    }
+}
+
+/* 4. Telas Médias e Inteligentes (Nest Hub Max, Telas de 769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .signup-container {
+        max-width: 420px;
+    }
+}
+
+/* 5. Telas Grandes (iPad Pro 13, Surface Pro 10, Desktops: acima de 1025px) */
+@media (min-width: 1025px) {
     body {
         background-attachment: fixed;
+    }
+
+    .signup-container {
+        max-width: 440px;
+        padding: 32px 28px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* 6. Dispositivos na horizontal (Landscape) ou com pouca altura (ex: Nest Hub, telas deitadas) */
+@media (max-height: 650px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 12px;
+    }
+
+    .dev-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .subtitle {
+        margin-bottom: 14px;
+    }
+
+    .input-group {
+        margin-bottom: 8px;
     }
 }
